@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemeriksa URL Phishing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Pemeriksa URL Phishing</h1>
+        <p>Masukkan URL di bawah ini untuk memeriksa apakah aman atau berpotensi berbahaya.</p>
+        <form id="url-form">
+            <input type="url" id="url-input" placeholder="https://contoh.com" required>
+            <button type="submit">Periksa URL</button>
+        </form>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Menganalisis...</p>
+        </div>
+        <div id="results-container" class="hidden">
+            <h2>Hasil Analisis</h2>
+            <div id="final-result"></div>
+            <div class="result-card">
+                <h3>Google Safe Browse</h3>
+                <p id="safe-Browse-result"></p>
+            </div>
+            <div class="result-card">
+                <h3>Analisis AI (Gemini)</h3>
+                <p id="gemini-result"></p>
+            </div>
+        </div>
+         <div id="error-container" class="hidden">
+            <p id="error-message"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
